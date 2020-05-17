@@ -2,7 +2,13 @@ import React from "react";
 
 function Posts({ posts, loading }) {
   if (loading) {
-    return <h1 className="text-secondary mt-4">Loading...</h1>;
+    return (
+      <div class="d-flex justify-content-center mt-5">
+        <div class="spinner-border text-primary text-center " role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
   return (
